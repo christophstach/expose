@@ -1,0 +1,80 @@
+\documentclass[]{article}
+
+%Deutsche Bezeichnungen für angezeigte Namen (z.B. Innhaltsverzeichnis etc.)
+\usepackage[ngerman]{babel}
+
+% prints dummy text
+\usepackage{blindtext}
+
+% Ränder bei Bedarf zeigen
+%\usepackage{showframe}
+
+%Erlaubt unteranderem Umbrücke captions
+\usepackage{caption}
+
+%Kompakte Listen
+\usepackage{paralist}
+
+%Zitate besser formatieren und darstellen
+\usepackage{epigraph}
+
+%Zeilenabstand 1,5
+\usepackage[onehalfspacing]{setspace}
+
+%Verbesserte Darstellung der Buchstaben zueinander
+\usepackage[stretch=10]{microtype}
+
+%Unterstützung von Umlauten und anderen Sonderzeichen (UTF-8)
+\usepackage{lmodern}
+\usepackage[utf8]{luainputenc}
+\usepackage[T1]{fontenc}
+
+%Einfachere Zitate
+\usepackage{epigraph}
+
+%Verwendung von Akronymen
+\usepackage[printonlyused]{acronym}
+
+%Unterstützung der H positionierung (keine automatische Verschiebung eingefügter Elemente)
+\usepackage{float} 
+
+%Erlaubt Umbrüche innerhalb von Tabellen
+\usepackage{tabularx}
+
+%Erlaubt Seitenumbrüche mit Tabellen
+\usepackage{longtable}
+
+%Erlaubt die Darstellung von Sourcecode mit Highlighting
+\usepackage[outputdir=out]{minted}
+
+%Definierung eigener Farben bei nutzung eines selbst vergebene Namens
+\usepackage[table,xcdraw]{xcolor}
+
+%Vektorgrafiken
+\usepackage{tikz}
+
+%Grafiken (wie jpg, png, etc.)
+\usepackage{graphicx}
+
+%Grafiken von Text umlaufen lassen
+\usepackage{wrapfig}
+
+%Ermöglicht Verknüpfungen innerhalb des Dokumentes (e.g. for PDF), Links werden durch "hidelink" nicht explizit hervorgehoben
+\usepackage[hidelinks, ngerman]{hyperref}
+
+%Einbindung und Verwaltung von Literaturverzeichnissen
+\usepackage{csquotes} %wird von biber benötigt
+\usepackage[style=alphabetic, backend=biber, bibencoding=utf8]{biblatex}
+\addbibresource{references/references.bib}
+
+% for enumeration
+\usepackage{enumitem}
+
+%-------------------------------Zusätzliche Anpassungen und Modifikationen--------------------------------------------%
+%Pluszeichen in der Referenz beim zitieren ausblenden
+\renewcommand*{\labelalphaothers}{}
+
+\addto{\captionsngerman}{\renewcommand{\abstractname}{Abstract}}
+
+%Exposé Type
+\newcommand*{\exposeType}[1]{\gdef\@exposeType{#1}}

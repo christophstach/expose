@@ -1,0 +1,15 @@
+{
+  "name": "expose",
+  "version": "1.0.0",
+  "description": "Exposé für die Bachelor Thesis von Christoph Stach.",
+  "scripts": {
+    "watch": "rm -Rf ./out && mkdir ./out && latexmk -pvc -pdf -shell-escape -output-directory=out main.tex"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christophstach/expose.git"
+  },
+  "author": "Christoph Stach",
+  "license": "ISC",
+  "homepage": "https://github.com/christophstach/expose#readme"
+}
