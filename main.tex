@@ -29,16 +29,24 @@
 TODO
 
 \section{Zielsetzung}
-Ziel des Projektes ist eine Anwendung zu erstellen die in der Lage ist
+Ziel des Projektes ist ein Softwaresystem zu erstellen das in der Lage ist
 Style Transfer auf Geräten mit leistungsarmer Hardware (z.B. Mobiltelefonene oder Laptops ohne GPU) zu ermöglichen.
 
 \section{Vorgehen}
-Beispiel Angabe einer Quelle: Backpropagation Algorithm \cite{doi:10.1162/neco.1989.1.4.541}
+Nach der Einarbeitung in die Grundlagen von Style Transfer \cite{DBLP:journals/corr/GatysEB15a} Methoden, müssen entsprechende Algorithmen gefunden werden.
+Da es sich um die Manipulation von Bildern handelt, werden vermutlich Convolutional Neural Networks \cite{lecun-gradientbased-learning-applied-1998}, welche sich dazu eigenen Features aus
+Bildern zu extrahieren, zum Einsatz kommen.
+Im nächsten Schritt muss ein Datensatz in entsprechender Größe generiert oder gefunden werden, mit dem ein solches Netzwerk trainiert werden
+kann. Auch denkbar ist der Einsatz von Transfer Learning mit bereits bestehenden, 
+vortrainierten Netzwerkarchitekturen \cite{DBLP:journals/corr/HeZRS15}, um die Ergebnisse zu verbessern.
+Letzendlich muss das Netzwerk auf den Verwendenten Datensatz durch Backpropagation \cite{doi:10.1162/neco.1989.1.4.541} optimiert werden.
+\\
+Die Implementierung des Models in den Prototypen eines Softwaresystems soll lediglich der Veranschaulichen der Ergebnisse dienen.
 
 \section{Erfordernisse und Randbedingungen}
 Da das Berechnen von Deep Neural Networks und Convolutional Neural Networks sehr rechenintensiv sein kann,
 werden diese normalerweise auf Serversystemen mit eingebauter Graphic Processing Unit realisiert. Das soll bei der Evaluation der 
-Modelle berücksichtigt werden, damit Ergebnisse in einem vertretbaren Zeitaufwand auf Systemen ohne GPU entstehen.
+Modelle berücksichtigt werden, damit Ergebnisse in einem vertretbaren Zeitaufwand auf Systemen ohne GPU zu berechnen sind.
 
 \section{Zeitplan}
 \includegraphics[width=1.00\textwidth]{resources/gantt.eps}
@@ -49,7 +57,7 @@ Deswegen wurden für das Training vorläufig zwei Wochen veranschlagt.
 
 \section{Erwartete Ergebnisse}
 Das Ergebnis des Projektes ist der laufähige Prototyp einer Anwedung mit mit der dazugehörigen Dokumentation und Erklärung
-aller der Verwendeten Algorithmen und Modelle.
+aller der verwendeten Algorithmen und Modelle.
 
 \section{Vorläufige Gliederung}
 
@@ -60,7 +68,11 @@ aller der Verwendeten Algorithmen und Modelle.
 	\item Analyse
 	\item Konzeption
 	\begin{enumerate}[label*=\arabic*.]
-		\item Beispiel Unterkapitel
+		\item Suche und Auswahl geeignter Modelle
+		\item Implementierung einer Basisversion der Modelle
+		\item Verbesserungen und Erweiterungen an Modellen
+		\item Hyperparameter-Tuning und Training
+		\item Implementierung der Modelle in den Prototypen eines Softwaresystems
 	\end{enumerate}
 	\item Implementierung
 	\item Test
