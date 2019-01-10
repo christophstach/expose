@@ -5,7 +5,9 @@
 *.log
 *.out
 *.run.xml
-out
 *.snippets
 *.synctex.gz
+*.bbl
+*.blg
+./main.pdf
 resources/*.pdf
