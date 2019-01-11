@@ -18,32 +18,32 @@
 	\begin{abstract}
 		Die Abschlussarbeit im Bereich der Angewandte Informatik handelt darum verschiedene Style Transfer Methoden zu implementieren,
 		die Konzepte zu verstehen und Sie auf Tauglichkeit für Systeme mit leistungsarmer Hardware zu testen. Style Transfer ist ein Bereich des 
-		Deeplearnings. Es werden dabei zwei, oder mehr, willkürliche Bilder zu einem neuen Bild kombiniert. Beim ersten Bild wird der Inhalt aus dem Bild herausgefiltert,
-		z.B. aus einem Foto auf dem ein Vogel zu sehen ist. Aus dem zweiten Bild wird Stil herausgefiltert, z.B. aus einem abstrakt gezeichneten Gemäden von Vincent van Gogh.
-		Als Ergebnis entsteht ein neues Bild, welches den gleichen Vogel darstellt, als wäre er von Vincent van Gogh gemalt worden. 
-		Es sollen unterschiedliche Algorithmen untersucht werden und die Ergebnisse mit einander vegliechen werden.
+		Deeplearnings. Es werden dabei zwei, oder mehr, willkürliche Bilder zu einem neuen Bild kombiniert. Beim ersten Bild wird der Inhalt aus
+		dem Bild herausgefiltert, z.B. aus einem Foto auf dem ein Vogel zu sehen ist. Aus dem zweiten Bild wird der Stil herausgefiltert, 
+		z.B. aus einem abstrakt gezeichneten Gemälde. Als Ergebnis entsteht ein neues Bild, und dem Original ähnliches Bild. Es sollen 
+		unterschiedliche Algorithmen untersucht werden und die Ergebnisse miteinander veglichen werden.
 	\end{abstract}
 \end{otherlanguage}
 
 \pagebreak
 
 \section{Motivation}
-Ich bin ausgebildeter Webentwickler und spezialisiere mich auf Machinelearning an der HTW Berlin. Bei meiner täglichen Arbeit,
+Ich bin ausgebildeter Webentwickler und spezialisiere mich auf Machinelearning an der HTW Berlin. Bei meiner täglichen Arbeit
 entwickle ich Anwendungen die performant im Browser ausgeführt werden. Das weckt das Interesse bei mir beide Gebiete zu kombinieren
-und die Ausführung von Machinelearning Modellen auf leistungsarmer Hardware zu untersuchen.
+und die Ausführung von Machinelearning Modellen auf leistungsarmer Hardware \footnote{z.B. Mobiltelefone oder Laptops ohne GPU} zu untersuchen.
 
 \section{Zielsetzung}
 Ziel des Projektes ist ein Softwaresystem zu erstellen das in der Lage ist
-Style Transfer auf Geräten mit leistungsarmer Hardware (z.B. Mobiltelefone oder Laptops ohne GPU) zu ermöglichen.
+Style Transfer auf Geräten mit leistungsarmer Hardware zu ermöglichen.
 
 \section{Vorgehen}
-Nach der Einarbeitung in die Grundlagen von Style Transfer \cite{DBLP:journals/corr/GatysEB15a} Methoden, müssen entsprechende Algorithmen gefunden werden.
-Da es sich um die Manipulation von Bildern handelt, werden vermutlich Convolutional Neural Networks \cite{lecun-gradientbased-learning-applied-1998}, 
-welche sich dazu eigenen Features aus Bildern zu extrahieren, zum Einsatz kommen.
-Im nächsten Schritt muss ein Datensatz in entsprechender Größe generiert oder gefunden werden, mit dem ein solches Netzwerk trainiert werden
-kann. Auch denkbar ist der Einsatz von Transfer Learning mit bereits bestehenden, 
-vortrainierten Netzwerkarchitekturen \cite{DBLP:journals/corr/SimonyanZ14a}, um die Ergebnisse zu verbessern.
-Letztendlich muss das Netzwerk auf den verwendeten Datensatz durch Backpropagation \cite{doi:10.1162/neco.1989.1.4.541} optimiert werden.
+Nach der Einarbeitung in die Grundlagen von Style Transfer \cite{DBLP:journals/corr/GatysEB15a} \cite{DBLP:journals/corr/JohnsonAL16} Methoden,
+müssen entsprechende Algorithmen gefunden werden. Da es sich um die Manipulation von Bildern handelt, werden Convolutional Neural Networks
+\cite{lecun-gradientbased-learning-applied-1998} zum Einsatz kommen, die sich dazu eignen Features aus Bildern zu extrahieren. 
+Im nächsten Schritt muss ein Datensatz in entsprechender Größe generiert oder gefunden werden, mit dem ein solches Netzwerk trainiert 
+werden kann. Auch möglich ist der Einsatz von Transfer Learning mit bereits bestehenden, vortrainierten Netzwerkarchitekturen
+\cite{DBLP:journals/corr/SimonyanZ14a}, um die Ergebnisse zu verbessern. Letztendlich muss das Netzwerk auf den verwendeten Datensatz durch
+Backpropagation \cite{doi:10.1162/neco.1989.1.4.541} optimiert werden.
 \\
 Die Implementierung des Models in den Prototypen eines Softwaresystems soll lediglich der Veranschaulichen der Ergebnisse dienen.
 
