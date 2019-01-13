@@ -18,34 +18,34 @@
 	\begin{abstract}
 		Die Abschlussarbeit im Bereich der Angewandte Informatik handelt darum verschiedene Style Transfer Methoden zu implementieren,
 		die Konzepte zu verstehen und Sie auf Tauglichkeit für Systeme mit leistungsarmer Hardware zu testen. Style Transfer ist ein Bereich des 
-		Deeplearnings. Es werden dabei zwei, oder mehr, willkürliche Bilder zu einem neuen Bild kombiniert. Beim ersten Bild wird der Inhalt aus
+		Deep Learning. Es werden dabei zwei, oder mehrere, willkürliche Bilder zu einem neuen Bild kombiniert. Beim ersten Bild wird der Inhalt aus
 		dem Bild herausgefiltert, z.B. aus einem Foto auf dem ein Vogel zu sehen ist. Aus dem zweiten Bild wird der Stil herausgefiltert, 
-		z.B. aus einem abstrakt gezeichneten Gemälde. Als Ergebnis entsteht ein neues, dem Original ähnliches Bild. Es sollen 
-		unterschiedliche Algorithmen untersucht werden und die Ergebnisse miteinander veglichen werden.
+		z.B. aus einem abstrakt gezeichneten Gemälde. Das Ergebnis ist die Mischung aus Objekt und Style. Die Ausrichtung, ob das Ergebnis mehr 
+		Objekt oder eher Style ist, kann durch Parameter beeinflusst werden. Es sollen unterschiedliche Algorithmen untersucht werden und
+		die Ergebnisse miteinander veglichen werden.
 	\end{abstract}
 \end{otherlanguage}
 
 \pagebreak
 
 \section{Motivation}
-Ich bin ausgebildeter Webentwickler und spezialisiere mich auf Machinelearning an der HTW Berlin. Bei meiner täglichen Arbeit
-entwickle ich Anwendungen die performant im Browser ausgeführt werden. Das weckt das Interesse bei mir beide Gebiete zu kombinieren
-und die Ausführung von Machinelearning Modellen auf leistungsarmer Hardware\footnote{z.B. Mobiltelefone oder Laptops ohne GPU} zu untersuchen.
+Style Transfer ist ein intressantes Forschungsobjekt. Es müssen 
 
 \section{Zielsetzung}
 Ziel des Projektes ist ein Softwaresystem zu erstellen das in der Lage ist
-Style Transfer auf Geräten mit leistungsarmer Hardware zu ermöglichen.
+Style Transfer auf Geräten mit leistungsarmer Hardware zu ermöglichen. Dabei sollen Mechanismen des Style Transfer
+untersucht werden und sukzessiv verbessert werden.
 
 \section{Vorgehen}
 Nach der Einarbeitung in die Grundlagen von Style Transfer \cite{DBLP:journals/corr/GatysEB15a} \cite{DBLP:journals/corr/JohnsonAL16} Methoden,
 müssen entsprechende Algorithmen gefunden werden. Da es sich um die Manipulation von Bildern handelt, werden Convolutional Neural Networks
 \cite{lecun-gradientbased-learning-applied-1998} zum Einsatz kommen, die sich dazu eignen Features aus Bildern zu extrahieren. 
-Im nächsten Schritt muss ein Datensatz in entsprechender Größe generiert oder gefunden werden, mit dem ein solches Netzwerk trainiert 
+Im nächsten Schritt muss ein Datensatz wie Image Net \cite{imagenet_cvpr09} benutzt oder in entsprechender Größe generiert werden, mit dem ein solches Netzwerk trainiert 
 werden kann. Auch möglich ist der Einsatz von Transfer Learning mit bereits bestehenden, vortrainierten Netzwerkarchitekturen
 \cite{DBLP:journals/corr/SimonyanZ14a}, um die Ergebnisse zu verbessern. Letztendlich muss das Netzwerk auf den verwendeten Datensatz durch
 Backpropagation \cite{doi:10.1162/neco.1989.1.4.541} optimiert werden.
 \\
-Die Implementierung des Models in den Prototypen eines Softwaresystems soll lediglich der Veranschaulichung der Ergebnisse dienen.
+Die Implementierung des Models in den Prototypen eines Softwaresystems soll der Veranschaulichung der Ergebnisse dienen.
 
 \pagebreak
 
@@ -63,7 +63,9 @@ Deswegen wurden für das Training vorläufig zwei Wochen veranschlagt.
 
 \section{Erwartete Ergebnisse}
 Das Ergebnis des Projektes ist der lauffähige Prototyp eines Softwaresystems mit der dazugehörigen Dokumentation und Erklärung
-aller verwendeten Algorithmen und Modelle.
+aller verwendeten Algorithmen und Modelle. Der Prototyp soll eine Verschmischen von einem Style mit einem Bild ermöglichen. 
+Sollte das erfolgreich implementiert werden können, soll er erweitert werden um die Möglichkeit mehrere verschiedene Styles zu wählen.
+Ziel ist es außerdem den performantesten Ansatz des Algorithmus in den Prototypen zu implementieren.
 
 \pagebreak
 
